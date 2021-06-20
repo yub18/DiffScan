@@ -22,7 +22,8 @@ scan <- function(r, seed, alpha = 0.05, N = 1e3, ncores = "auto") {
     message('First time to run scan. Downloading precalculated parameters ...')
     download.file(
       url = "https://cloud.tsinghua.edu.cn/f/fea1d50f36d44c01b812/?dl=1",
-      destfile = paste0(dir_pkg, '/R/Qmax_null.rds')
+      destfile = paste0(dir_pkg, '/R/Qmax_null.rds'),
+      mode = 'wb'
     )
   }
   if(!('Qmax_null' %in% objects(envir = .GlobalEnv))) {
@@ -160,6 +161,7 @@ scan <- function(r, seed, alpha = 0.05, N = 1e3, ncores = "auto") {
     ncores = ncores
   )
 
+  message('\t')
   message("Scan completed, pick regions ====================")
   pick <- function(res, ncores) {
     pick_seg <- function(cands) {
