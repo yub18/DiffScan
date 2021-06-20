@@ -24,6 +24,8 @@ Install DESSERT in [R](https://cran.r-project.org/) or
 ``` r
 if (!requireNamespace("devtools", quietly = TRUE))
     install.packages("devtools")
+if (!requireNamespace("preprocessCore", quietly = TRUE))
+    install.packages("http://bioconductor.org/packages/3.11/bioc/src/contrib/preprocessCore_1.50.0.tar.gz")
     
 devtools::install_github("yub18/DESSERT")
 ```
