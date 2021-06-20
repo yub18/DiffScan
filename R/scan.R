@@ -18,12 +18,15 @@
 #'
 scan <- function(r, seed, alpha = 0.05, N = 1e3, ncores = "auto") {
   dir_pkg = find.package('DESSERT')
-  if(!('sysdata.rdb' %in% list.files(paste0(dir_pkg, '/R/')))) {
+  if(!('Qmax_null.rds' %in% list.files(paste0(dir_pkg, '/R/')))) {
     message('First time to run scan. Downloading precalculated parameters ...')
     download.file(
-      url = "https://cloud.tsinghua.edu.cn/f/0f100a653ca948f7a362/?dl=1",
-      destfile = paste0(dir_pkg, '/R/sysdata.rdb')
+      url = "https://cloud.tsinghua.edu.cn/f/fea1d50f36d44c01b812/?dl=1",
+      destfile = paste0(dir_pkg, '/R/Qmax_null.rds')
     )
+  }
+  if(!('Qmax_null' %in% objects(envir = .GlobalEnv))) {
+    Qmax_null <<- readRDS(paste0(dir_pkg, '/R/Qmax_null.rds'))
   }
   if(.Platform$OS.type == 'windows') ncores <- 1
   else {

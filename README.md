@@ -25,7 +25,7 @@ Install DESSERT in [R](https://cran.r-project.org/) or
 if (!requireNamespace("devtools", quietly = TRUE))
     install.packages("devtools")
     
-devtools::install_github("yub18/diffScan@v1.0.0")
+devtools::install_github("yub18/DESSERT")
 ```
 
 ## Usage
