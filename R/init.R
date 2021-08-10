@@ -1,4 +1,4 @@
-#' Initialize DESSERT
+#' Initialize DiffScan
 #'
 #' Initialize with optional quality control.
 #'

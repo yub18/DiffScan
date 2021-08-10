@@ -17,7 +17,7 @@
 #' @export
 #'
 scan <- function(r, seed, alpha = 0.05, N = 1e3, ncores = "auto") {
-  dir_pkg = find.package('DESSERT')
+  dir_pkg = find.package('DiffScan')
   if(!('Qmax_null.rds' %in% list.files(paste0(dir_pkg, '/R/')))) {
     message('First time to run scan. Downloading precalculated parameters ...')
     download.file(
