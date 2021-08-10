@@ -1,10 +1,10 @@
-Package: DESSERT
+Package: DiffScan
 Type: Package
-Title: Differential Analysis of RNA Structural Probing Experiments in High Resolution
-Version: 0.1.0
+Title: Differential Analysis of RNA Structure Probing Experiments at Nucleotide Resolution: Uncovering Regulatory Functions of RNA Structure
+Version: 1.0.0
 Author: Bo Yu <yub18@mails.tsinghua.edu.cn>
 Maintainer: Bo Yu <yub18@mails.tsinghua.edu.cn>, Lin Hou <houl@tsinghua.edu.cn>
-Description: DESSERT identifies RNA structurally variable regions between two cellular conditions from RNA structure probing data.
+Description: DiffScan identifies RNA structurally variable regions between two cellular conditions from RNA structure probing data.
 License: MIT
 Encoding: UTF-8
 LazyData: true

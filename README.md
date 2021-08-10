@@ -1,24 +1,22 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# DESSERT
+# DiffScan
 
 <!-- badges: start -->
 
 <!-- badges: end -->
 
-DESSERT is a statistical framework for DiffErential analySis of RNA
-Structure probing Experiments in high ResoluTion. Specifically, it
+DiffScan is a computational framework for differential analysis of RNA
+structure probing experiments at nucleotide resolution. Specifically, it
 identifies RNA structurally variable regions between two cellular
 conditions.
 
-DESSERT performs differential analysis with nucleotide resolution,
-rigorous error control, and high statistical power. Moreover, it is
-compatible with various RNA structure probing platforms.
+DiffScan is compatible with various RNA structure probing platforms.
 
 ## Installation
 
-Install DESSERT in [R](https://cran.r-project.org/) or
+Install DiffScan in [R](https://cran.r-project.org/) or
 [Rstudio](https://www.rstudio.com/products/rstudio/) with:
 
 ``` r
@@ -27,7 +25,7 @@ if (!requireNamespace("devtools", quietly = TRUE))
 if (!requireNamespace("preprocessCore", quietly = TRUE))
     install.packages("http://bioconductor.org/packages/3.11/bioc/src/contrib/preprocessCore_1.50.0.tar.gz")
     
-devtools::install_github("yub18/DESSERT")
+devtools::install_github("yub18/DiffScan")
 ```
 
 ## Usage
@@ -37,7 +35,7 @@ with 2 replicates in each condition. To identify SVRs in the
 transcripts, first format the data like the following.
 
 ``` r
-library(DESSERT)
+library(DiffScan)
 library(dplyr)
 set.seed(123)
 r = list(
@@ -52,7 +50,7 @@ r = list(
 )
 ```
 
-Second, initialize diffScan as follows. (See the document of  for
+Second, initialize DiffScan as follows. (See the document of  for
 appropriate quality control.)
 
 ``` r
