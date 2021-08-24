@@ -5,7 +5,7 @@ Version: 1.0.0
 Author: Bo Yu <yub18@mails.tsinghua.edu.cn>
 Maintainer: Bo Yu <yub18@mails.tsinghua.edu.cn>, Lin Hou <houl@tsinghua.edu.cn>
 Description: DiffScan identifies RNA structurally variable regions between two cellular conditions from RNA structure probing data.
-License: MIT
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
