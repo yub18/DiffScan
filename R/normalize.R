@@ -99,7 +99,7 @@ normalize <- function(r, fake0 = FALSE, plotfile = FALSE, ncores = "auto", verbo
         for (j in seq_len(ncol(X))) {
           setj <- intersect(set1, which(X[, j] != 0))
           approxs <- stats::approx(
-            x = unique(X[set, j]), y = unique(X_norm[set, j]), xout = X[setj, j]
+            x = X[set, j], y = X_norm[set, j], xout = X[setj, j]
           )$y
           X_norm[setj, j] <- ifelse(is.na(approxs), X_norm[setj, j], approxs)
         }
