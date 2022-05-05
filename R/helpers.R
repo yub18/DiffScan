@@ -63,19 +63,10 @@ SVR2diff <- function(SVR, n) {
 #'
 #' @export
 diff2SVR <- function(diff, len_merge = 0) {
-  rle <- rle(diff)
-  if (len_merge > 0) {
-    rle$values[(!rle$values) & (rle$lengths <= len_merge)] <- T
-    rle <- rle(inverse.rle(rle))
-  }
-  i_region <- which(rle$values == T)
-  if (length(i_region) == 0) {
-    return(dplyr::tibble(Start = integer(0), Stop = integer(0)))
-  }
-  cum_len <- cumsum(rle$lengths)
-  lapply(i_region, function(k) {
-    stop <- cum_len[k]
-    start <- stop - rle$lengths[k] + 1
-    dplyr::tibble(Start = start, Stop = stop)
-  }) %>>% rlist::list.rbind()
+  if ((len_merge %% 1 != 0) | (len_merge < 0)) stop("len_merge must be positive integer.")
+  x = which(diff)
+  return(data.frame(
+    Start = c(x[1], x[which(diff(x) > 1 + len_merge) + 1]),
+    Stop = c(x[which(diff(x) > 1 + len_merge)], tail(x, 1))
+  ))
 }
