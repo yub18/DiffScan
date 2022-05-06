@@ -106,3 +106,10 @@ res
 Expected run time: a few minutes or less.
 
 ## Citation
+
+[Yu, et al. Differential Analysis of RNA Structure Probing Experiments at Nucleotide Resolution: Uncovering Regulatory Functions of RNA Structure. bioRxiv, 2021.](https://www.biorxiv.org/content/10.1101/2021.08.24.457484v1)
+
+
+## Scripts and data
+
+The scripts and data for the reproduction of the analyses and results in DiffScan paper are available [here](https://cloud.tsinghua.edu.cn/published/diffscan_scripts_and_data).
