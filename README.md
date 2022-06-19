@@ -114,6 +114,18 @@ res
 
 Expected run time: a few minutes or less.
 
+## Flu dataset
+
+The following code reproduces DiffScan’s results for the Flu dataset.
+
+``` r
+data(Flu)
+r = list(Flu = Flu[,1:8])
+r_init = init(r, ncores = 1)
+r_norm = normalize(r_init, ncores = 1)
+res = scan(r_norm$r, seed = 123, alpha = 0.05, ncores = 1)
+```
+
 ## Citation
 
 [Yu, et al. Differential Analysis of RNA Structure Probing Experiments
