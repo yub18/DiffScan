@@ -130,8 +130,8 @@ res = scan(r_norm$r, seed = 123, alpha = 0.05, ncores = 1)
 
 [Yu, et al. Differential Analysis of RNA Structure Probing Experiments
 at Nucleotide Resolution: Uncovering Regulatory Functions of RNA
-Structure.
-bioRxiv, 2021.](https://www.biorxiv.org/content/10.1101/2021.08.24.457484v1)
+Structure. Nature
+Communications, 2022.](https://www.nature.com/articles/s41467-022-31875-3)
 
 ## Scripts and data
 
