@@ -21,7 +21,7 @@ scan <- function(r, seed, alpha = 0.05, N = 1e3, ncores = "auto") {
   if(!('Qmax_null.rds' %in% list.files(paste0(dir_pkg, '/R/')))) {
     message('First time to run scan. Downloading precalculated parameters ...')
     download.file(
-      url = "https://public.dm.files.1drv.com/y4mWkxGL7J2ZVa7SOUZDCBulPrRpKSMLim7Z_eT_dBL8AZIQqPvZBRt9OR1APkA8heQCCBAoLNW8FfyFGkmTtxEyZXJgBQlJ0wobPqdtoSuSITxIXaxc5XY2LeBCnwiVlorIYjwi4ZyBToPn5NYrzpHISGkKNKC37TCpfintXrj-bHah23Nnk2jXXvdYfVB1qTFekOKsZZaJ-_3zutAdYVXVoOg89mBYPOiQJElW-udi70?AVOverride=1",
+      url = "https://onedrive.live.com/download?resid=3D9C2C35D99F543F%2134216&authkey=!AH2XMY2d6FUe0mo&download=1",
       destfile = paste0(dir_pkg, '/R/Qmax_null.rds'),
       mode = 'wb'
     )
